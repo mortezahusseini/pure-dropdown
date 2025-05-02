@@ -1,0 +1,25 @@
+
+$box-max-size: 300px;
+$border-radius-lg: 24px;
+
+%elevation-dropdown {
+  box-shadow: 0 2px 4px 0 rgba(33, 33, 33, 0.2), 0 1px 10px 0 rgba(33, 33, 33, 0.12),
+    0 4px 5px 0 rgba(33, 33, 33, 0.14);
+}
+
+.box {  
+  width: 100%;
+  height: $box-max-size;
+  background-color: white;
+  position: absolute;       
+  top: 100%;
+  left: 0;
+  z-index: 6;
+
+  @extend %elevation-dropdown;
+
+  &--on-top {
+    top: unset;
+    bottom: 0;
+  }
+}
